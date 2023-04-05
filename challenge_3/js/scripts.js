@@ -10,10 +10,12 @@ const divider = '----------------------------------'
 
 // Only change below this line
 
-const owed = (  parseFloat(leoBalance *-1) + parseFloat(sarahBalance*-1))
-const amount ='R'+ owed.toFixed(2)
-const leo = `${` ${leoName} ${leoSurname} `} Owed R( ${leoBalance}) `
-const sarah = `${`${sarahName}${sarahSurname}`}(Owed R${sarahBalance})`
+const leoPositive =  parseFloat(leoBalance *-1)
+const sarahPositive = parseFloat(sarahBalance*-1)
+const owed = leoPositive + sarahPositive
+const amount = owed.toLocaleString("fi-FI");
+const leo = `${` ${leoName} ${leoSurname} `} Owed R(${leoPositive}) `
+const sarah = `${`${sarahName}${sarahSurname}`}(Owed R${sarahPositive})`
 const total = "Total amount owed: "
 const result =` ${leo}  
  ${sarah}  
