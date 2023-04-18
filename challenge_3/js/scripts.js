@@ -10,14 +10,14 @@ const divider = '----------------------------------'
 
 // Only change below this line
 
-const leoPositive =  parseFloat(-leoBalance)
-const sarahPositive = parseFloat(-sarahBalance)
+const leoPositive =  parseFloat(-leoBalance)// change string into positive number
+const sarahPositive = parseFloat(-sarahBalance)// change string into positive number
 const owed = leoPositive + sarahPositive
-const amount = owed.toLocaleString("fi-FI");
-const leo = `${` ${leoName} ${leoSurname} `} (Owed: R${leoPositive.toFixed(2)}) `
-const sarah = `${`${sarahName}${sarahSurname}`}(Owed: R${sarahPositive.toFixed(2)})`
+const amount = owed.toLocaleString("fi-FI"); //added a space seperator
+const leo = `${` ${leoName} ${leoSurname} `} (Owed: R${leoPositive.toFixed(2)}) `//fixed interpolation and var name syntax and made leoPositive have 2 decimal places
+const sarah = `${`${sarahName}${sarahSurname}`}(Owed: R${sarahPositive.toFixed(2)})`//fixed interpolation and var name syntax and made sarahPositive have 2 decimal places
 const total = "Total amount owed: "
-const result =` ${leo}  
+const result =/**back ticked so i could customize console.log presentation*/` ${leo} 
  ${sarah}  
 ${divider}  
 
